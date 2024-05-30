@@ -1,0 +1,10 @@
+name: Simple Workflow
+
+on: workflow_dispatch
+
+jobs:
+  PrintMessage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo '***** Github Action Demo *****'
