@@ -1,0 +1,16 @@
+name: Simple Multi-Job Workflow
+
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message from Job 1
+        run: echo 'This is Job 1'
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message from Job 2
+        run: echo 'This is Job 2'
