@@ -1,4 +1,4 @@
-name: Simple Workflow
+name: 1. Simple Workflow
 
 on: workflow_dispatch
 
