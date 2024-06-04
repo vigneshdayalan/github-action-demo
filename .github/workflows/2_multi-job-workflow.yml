@@ -1,4 +1,4 @@
-name: Simple Multi-Job Workflow with Dependency
+name: 2. Simple Multi-Job Workflow
 
 on: workflow_dispatch
 
@@ -10,7 +10,6 @@ jobs:
         run: echo 'This is Job 1'
 
   job2:
-    needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: Print Message from Job 2
