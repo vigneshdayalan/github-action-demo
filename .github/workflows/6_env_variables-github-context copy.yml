@@ -1,4 +1,4 @@
-name: 5. Using contexts to access variables
+name: 6. Using contexts to access variables
 
 on: workflow_dispatch
 

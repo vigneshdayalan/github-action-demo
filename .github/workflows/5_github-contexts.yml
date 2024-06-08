@@ -1,0 +1,29 @@
+name: 5. Output Information Using Contexts 
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub Context
+        run: echo "${{ toJSON(github) }}"
+      
+      - name: Output Repo Information
+        run: | 
+          echo "Repository Name - ${{ github.repository }}"
+          echo "Commit Id - ${{ github.sha }}"
+      
+      - name: Output Runner Information
+        run: | 
+          echo "Runnner Name - ${{ runner.name }}"
+          echo "Runnner OS - ${{ runner.os }}"
+          echo "Runnner Type - ${{ runner.environment }}"
+
+      - name: Output Workflow Job Information
+        run: | 
+          echo "Job Status - ${{ job.status }}"
+
+      
+      
