@@ -1,0 +1,20 @@
+name: 4. Environment Variables Demo
+
+on: workflow_dispatch
+
+env:
+  WORKFLOW_LEVEL_VAR: "This is set at the workflow level"
+
+jobs:
+  PrintEnvVariable:
+    runs-on: ubuntu-latest
+    env:
+      JOB_LEVEL_VAR: "This is set at the job level"
+    steps:
+      - name: Print Variables
+        env:
+          STEP_LEVEL_VAR: "This is set at the step level"
+        run: |
+          echo "WORKFLOW_LEVEL_VAR: ${{ env.WORKFLOW_LEVEL_VAR }}"
+          echo "JOB_LEVEL_VAR: ${{ env.JOB_LEVEL_VAR }}"
+          echo "STEP_LEVEL_VAR: ${{ env.STEP_LEVEL_VAR }}"

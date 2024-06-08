@@ -1,4 +1,4 @@
-name: 4. Notify Slack on Pull Request
+name: Notify Slack on Pull Request
 
 on:
   pull_request:
