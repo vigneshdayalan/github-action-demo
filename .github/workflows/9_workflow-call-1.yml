@@ -1,0 +1,11 @@
+name: 9. Workflow Call Demo 
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  workflow-caller:
+    uses: ./.github/workflows/9_workflow-call-2.yml
+          
+
