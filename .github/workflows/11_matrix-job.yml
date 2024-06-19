@@ -7,13 +7,15 @@ on:
 jobs:
   build-project:
     runs-on: ubuntu-latest
-    
+
     defaults:
       run:
         working-directory: ./SimpleCalculator
+
     strategy:
       matrix:
         version: [6.0.x, 7.0.x, 8.0.x]
+        
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
