@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build-and-test:
+  build-project:
     runs-on: ubuntu-latest
     
     defaults:
