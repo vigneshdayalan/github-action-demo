@@ -1,6 +1,3 @@
-using SimpleCalculator;
-using Xunit;
-
 namespace SimpleCalculator.Tests
 {
     public class CalculatorTests
