@@ -1,0 +1,23 @@
+name: 12. Define and Use Job Outputs
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Output
+        id: calc
+        run: |
+          echo "name=output1::$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          echo "name=output2::$(uname -r)" >> $GITHUB_OUTPUT
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: Use Outputs from Job 1
+        run: |
+          echo "Output 1 from job1: ${{ needs.job1.outputs.output1 }}"
+          echo "Output 2 from job1: ${{ needs.job1.outputs.output2 }}"
