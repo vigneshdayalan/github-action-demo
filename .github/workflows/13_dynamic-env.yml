@@ -1,0 +1,13 @@
+name: 13. Use $GITHUB_ENV
+
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set dynamic environment variable
+        run: echo "MY_VAR=Hello !!!" >> $GITHUB_ENV
+
+      - name: Use the environment variable
+        run: echo "MY_VAR is $MY_VAR"
